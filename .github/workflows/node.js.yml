@@ -13,12 +13,13 @@ jobs:
     runs-on: windows-2022
 
     steps:
+    - uses: actions/checkout@v5
+
     - name : "Hello world"
       run: echo "Hello world"
 
     - name : Dime la fecha
       run: date
+
     - name : Muestra el contenido del directorio
       run: dir
-    
-      
