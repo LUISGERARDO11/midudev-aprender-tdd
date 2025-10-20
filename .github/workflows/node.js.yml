@@ -15,3 +15,10 @@ jobs:
     steps:
     - name : "Hello world"
       run: echo "Hello world"
+
+    - name : Dime la fecha
+      run: date
+    - name : Muestra el contenido del directorio
+      run: dir
+    
+      
