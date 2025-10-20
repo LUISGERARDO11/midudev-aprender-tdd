@@ -6,6 +6,8 @@ name: Hola mundo practica clase
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
