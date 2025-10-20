@@ -10,16 +10,14 @@ on:
 jobs:
   build:
 
-    runs-on: windows-2022
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v5
 
-    - name : "Hello world"
-      run: echo "Hello world"
-
-    - name : Dime la fecha
-      run: date
-
-    - name : Muestra el contenido del directorio
-      run: dir
+    - uses: actions/setup-node@v6
+      with:
+        node-version: 24
+        cache: "npm"
+    - run : npm ci --legacy-peer-deps
+    - run : npm run build
